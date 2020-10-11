@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "573954778696",
+    "firebase_url": "https://viral-f7a7e.firebaseio.com",
+    "project_id": "viral-f7a7e",
+    "storage_bucket": "viral-f7a7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573954778696:android:6c1316517b05c9fbbe9a7d",
+        "android_client_info": {
+          "package_name": "com.neonatar.viral"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573954778696-njagjtnupa4r8fng0ea45tqbce2nqtec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neonatar.viral",
+            "certificate_hash": "71a162bb5204a3e0c933e73855f276afa44a8649"
+          }
+        },
+        {
+          "client_id": "573954778696-9d7jpeng4mctpqkapn47d2vioa8s9np3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-CySIx8EpplV6MOy3DY4XIUG-3zM9qhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573954778696-9d7jpeng4mctpqkapn47d2vioa8s9np3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
