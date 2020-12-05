@@ -1,3 +1,4 @@
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -95,8 +96,32 @@ class _HomeState extends State<Home> {
             ),
           ),
 
-          //Chart
-          VC_Chart(),
+          //Viral Analytics/Chart
+          //VC_Chart(),
+          Container(
+                margin: EdgeInsets.all(10.0),
+                height: 250,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20)
+                ),
+                width: MediaQuery.of(context).size.width,
+                child: Carousel(
+                  images: [
+                    NetworkImage(
+                        'https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
+                    NetworkImage(
+                        'https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+                    ExactAssetImage("assets/test1.jpg")
+                  ],
+                  dotSize: 4.0,
+                  dotSpacing: 15.0,
+                  dotColor: Colors.lightGreenAccent,
+                  indicatorBgPadding: 5.0,
+                  dotBgColor: Colors.purple.withOpacity(0.5),
+                  borderRadius: true,
+                ),
+              ),
 
           //Contact Card
           ContactWidget(),

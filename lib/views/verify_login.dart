@@ -175,6 +175,7 @@ class _SignUpViewState extends State<SignUpView> {
                           onPressed: (int index) {
                             setState(() {
                               _selections[index] = !_selections[index];
+
                             });
                           },
                           selectedColor: Theme.of(context).primaryColor,
@@ -183,7 +184,7 @@ class _SignUpViewState extends State<SignUpView> {
                           color: grey,
                           children: [Icon(Icons.radio_button_checked)],
                         ),
-                        CustomText(text: 'Term and Condition')
+                        CustomText(text: 'I agree to terms and conditions')
                       ],
                     )
                   ],
@@ -322,7 +323,7 @@ class _SignUpViewState extends State<SignUpView> {
                 "e.g 8123456789", 'Enter Phone Number'),
             onPhoneNumberChange: onPhoneNumberChange,
             initialPhoneNumber: _phone,
-            initialSelection: 'US',
+            initialSelection: 'NG',
             showCountryCodes: true),
       );
       textFields.add(SizedBox(height: 20));
