@@ -6,6 +6,7 @@ import 'package:international_phone_input/international_phone_input.dart';
 import 'package:viral/services/auth_service.dart';
 import 'package:viral/widget/colors.dart';
 import 'package:viral/widget/provider.dart';
+import 'package:viral/widget/title.dart';
 
 enum AuthFormType { signIn, signUp, reset, anonymous, convert, phone }
 
@@ -26,6 +27,7 @@ class _SignUpViewState extends State<SignUpView> {
 
   final formKey = GlobalKey<FormState>();
   String _email, _password, _name, _warning, _phone;
+  List<bool> _selections = List.generate(1, (_) => false);
 
   void switchFormState(String state) {
     formKey.currentState.reset();
@@ -133,44 +135,63 @@ class _SignUpViewState extends State<SignUpView> {
           elevation: 0,
           leading: IconButton(
               icon:
-              Icon(Icons.arrow_back, color: Theme.of(context).primaryColor),
+                  Icon(Icons.arrow_back, color: Theme.of(context).primaryColor),
               onPressed: () {
                 Navigator.of(context).pushReplacementNamed('/welcome');
               }),
         ),
         body: SafeArea(
             child: ListView(
-              children: <Widget>[
-                Container(
-                  color: white,
-                  height: _height,
-                  width: _width,
-                  child: SafeArea(
-                    child: Column(
-                      children: <Widget>[
-                        SizedBox(height: _height * 0.05),
-                        showAlert(),
-                        SizedBox(height: _height * 0.1),
-                        Container(
-                          height: _height * 0.1,
-                          child: Image.asset('assets/viral.png'),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 20.0, right: 20, top: 10, bottom: 20),
-                          child: Form(
-                            key: formKey,
-                            child: Column(
-                              children: buildInputs() + buildButtons(),
-                            ),
-                          ),
-                        ),
-                      ],
+          children: <Widget>[
+            Container(
+              color: white,
+              height: _height,
+              width: _width,
+              child: SafeArea(
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: _height * 0.05),
+                    showAlert(),
+                    SizedBox(height: _height * 0.1),
+                    Container(
+                      height: _height * 0.1,
+                      child: Image.asset('assets/viral.png'),
                     ),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 20.0, right: 20, top: 10, bottom: 20),
+                      child: Form(
+                        key: formKey,
+                        child: Column(
+                          children: buildInputs() + buildButtons(),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ToggleButtons(
+                          isSelected: _selections,
+                          onPressed: (int index) {
+                            setState(() {
+                              _selections[index] = !_selections[index];
+                            });
+                          },
+                          selectedColor: Theme.of(context).primaryColor,
+                          fillColor: white,
+                          renderBorder: false,
+                          color: grey,
+                          children: [Icon(Icons.radio_button_checked)],
+                        ),
+                        CustomText(text: 'Term and Condition')
+                      ],
+                    )
+                  ],
                 ),
-              ],
-            )),
+              ),
+            ),
+          ],
+        )),
       );
     }
   }
@@ -324,7 +345,7 @@ class _SignUpViewState extends State<SignUpView> {
       fillColor: Colors.grey[100],
       focusColor: Colors.white,
       contentPadding:
-      const EdgeInsets.only(left: 14.0, bottom: 10.0, top: 10.0),
+          const EdgeInsets.only(left: 14.0, bottom: 10.0, top: 10.0),
     );
   }
 
