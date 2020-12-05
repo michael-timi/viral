@@ -23,9 +23,9 @@ class HomeCarousel extends StatelessWidget {
         ],
         dotSize: 4.0,
         dotSpacing: 15.0,
-        dotColor: Colors.lightGreenAccent,
+        dotColor: Theme.of(context).primaryColor,
         indicatorBgPadding: 5.0,
-        dotBgColor: Colors.purple.withOpacity(0.5),
+        dotBgColor: Theme.of(context).backgroundColor,
         borderRadius: true,
       ),
     );
