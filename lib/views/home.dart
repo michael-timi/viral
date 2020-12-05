@@ -5,9 +5,11 @@ import 'package:intl/intl.dart';
 import 'package:viral/models/overview.dart';
 import 'package:viral/views/admin/admin.dart';
 import 'package:viral/views/locations/location_cart.dart';
+import 'package:viral/views/news.dart';
 import 'package:viral/widget/cart_item.dart';
 import 'package:viral/widget/colors.dart';
 import 'package:viral/widget/contact.dart';
+import 'package:viral/widget/home_carousel.dart';
 import 'package:viral/widget/news_card.dart';
 import 'package:viral/widget/overview_card.dart';
 import 'package:viral/widget/title.dart';
@@ -98,30 +100,7 @@ class _HomeState extends State<Home> {
 
           //Viral Analytics/Chart
           //VC_Chart(),
-          Container(
-                margin: EdgeInsets.all(10.0),
-                height: 250,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20)
-                ),
-                width: MediaQuery.of(context).size.width,
-                child: Carousel(
-                  images: [
-                    NetworkImage(
-                        'https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                    NetworkImage(
-                        'https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
-                    ExactAssetImage("assets/test1.jpg")
-                  ],
-                  dotSize: 4.0,
-                  dotSpacing: 15.0,
-                  dotColor: Colors.lightGreenAccent,
-                  indicatorBgPadding: 5.0,
-                  dotBgColor: Colors.purple.withOpacity(0.5),
-                  borderRadius: true,
-                ),
-              ),
+          HomeCarousel(),
 
           //Contact Card
           ContactWidget(),
@@ -170,16 +149,40 @@ class _HomeState extends State<Home> {
                   NewsWidget(
                     title: 'Update and offers',
                     icon: Icons.arrow_forward,
+                    onPress: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UpdateAndOffers(),
+                        ),
+                      );
+                    },
                   ),
                   SizedBox(height: 10),
                   NewsWidget(
-                    title: 'Our top 10 Whatsapp TVs in Nigeria and Ghana',
+                    title: 'Testimonials',
                     icon: Icons.arrow_forward,
+                    onPress: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Testimonials(),
+                        ),
+                      );
+                    },
                   ),
                   SizedBox(height: 10),
                   NewsWidget(
                     title: 'FAQs',
                     icon: Icons.arrow_forward,
+                    onPress: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FAQS(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -201,3 +204,4 @@ class _HomeState extends State<Home> {
     );
   }
 }
+

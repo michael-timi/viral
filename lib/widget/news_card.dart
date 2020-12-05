@@ -4,12 +4,13 @@ import 'colors.dart';
 
 class NewsWidget extends StatelessWidget {
   final String title;
+  final Function onPress;
   final IconData icon;
 
   const NewsWidget({
     Key key,
     this.title,
-    this.icon,
+    this.icon, this.onPress,
   }) : super(key: key);
 
   @override
@@ -33,7 +34,7 @@ class NewsWidget extends StatelessWidget {
                     child: AutoSizeText(
                       title,
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 15,
                         color: black,
                       ),
                       maxLines: 1,
@@ -44,9 +45,9 @@ class NewsWidget extends StatelessWidget {
                       icon: Icon(
                         icon,
                         color: black,
-                        size: 30,
+                        size: 25,
                       ),
-                      onPressed: () {})
+                      onPressed: onPress)
                 ],
               ),
             ),

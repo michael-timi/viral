@@ -6,6 +6,7 @@ import 'package:viral/services/auth_service.dart';
 import 'package:viral/views/first_view.dart';
 import 'package:viral/views/locations/location.dart';
 import 'package:viral/views/locations/location_cart.dart';
+import 'package:viral/views/news.dart';
 import 'package:viral/views/verify_login.dart';
 import 'package:viral/views/viral_pages.dart';
 import 'package:viral/widget/provider.dart';
@@ -40,7 +41,6 @@ class MyApp extends StatelessWidget {
               SignUpView(authFormType: AuthFormType.phone),
           '/welcome': (BuildContext context) => FirstView(),
           '/location': (BuildContext context) => Location(),
-          '/cart': (BuildContext context) => LocationCart(),
         },
       ),
     );
