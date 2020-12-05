@@ -427,10 +427,7 @@ class _SelectDateAndFileState extends State<SelectDateAndFile> {
                   ),
                   IconButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => UploadImage()));
+                        loadAssets();
                       },
                       icon: Icon(Icons.add_a_photo,
                           color: Theme.of(context).primaryColor, size: 20)),
