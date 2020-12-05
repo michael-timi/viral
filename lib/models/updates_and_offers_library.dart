@@ -1,13 +1,13 @@
 class UpdateAndOfferslibrary {
-  String title, body, imgUrl;
+  String title, time, body, imgUrl;
   int index;
 
-  UpdateAndOfferslibrary({this.title, this.body, this.imgUrl, this.index});
+  UpdateAndOfferslibrary({this.title, this.time, this.body, this.imgUrl, this.index});
 }
 
 List<UpdateAndOfferslibrary> updates_and_offers = [
   UpdateAndOfferslibrary(
-      title: 'UPDATE AND OFFER 1', body: 'This is the body 1', imgUrl: 'assets/test1.jpg', index: 1),
+      title: 'UPDATE AND OFFER 1', time:'5th Dec. 2020 at 4:28PM +1 GMT', body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \n\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using `Content here, content here`, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for `lorem ipsum` will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', imgUrl: 'assets/test1.jpg', index: 1),
   UpdateAndOfferslibrary(
-      title: 'UPDATE AND OFFER 2', body: 'This is the body 2', imgUrl: 'assets/test2.jpg', index: 2),
+      title: 'UPDATE AND OFFER 2', time:'5th Dec. 2020 at 5:05PM +1 GMT', body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \n\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using `Content here, content here`, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for `lorem ipsum` will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', imgUrl: 'assets/test2.jpg', index: 2),
 ];

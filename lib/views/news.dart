@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:viral/models/testimonial.dart';
 import 'package:viral/models/updates_and_offers_library.dart';
 import 'package:viral/widget/colors.dart';
 import 'package:viral/widget/title.dart';
@@ -36,6 +38,7 @@ class UpdateAndOffers extends StatelessWidget {
                       ));
                 },
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       height: 200,
@@ -47,16 +50,13 @@ class UpdateAndOffers extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 5),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        CustomText(
-                          text: updates_and_offers[index].title,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ],
+                    CustomText(
+                      text: updates_and_offers[index].title,
+                      fontWeight: FontWeight.bold, size: 20,
                     ),
-                    SizedBox(height: 5),
+                    SizedBox(height: 2),
+                    CustomText(text: updates_and_offers[index].time, color: grey,size:12),
+                    SizedBox(height: 10),
                   ],
                 ),
               );
@@ -75,12 +75,37 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            CustomText(
-              text: update.body,
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 200,
+                width: MediaQuery.of(context).size.width,
+                child: Image.asset(
+                  update.imgUrl,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(height: 15),
+              CustomText(
+                text: update.title,
+                size: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              SizedBox(height: 2),
+              CustomText(
+                text: update.time,
+                color: grey,
+                size: 12,
+              ),
+              SizedBox(height: 4),
+              CustomText(
+                text: update.body,
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -102,7 +127,59 @@ class Testimonials extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+          child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.builder(
+              itemCount: testimonial.length,
+              itemBuilder: (BuildContext context, int index){
+                return Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          child: CircleAvatar(
+                            foregroundColor: Theme.of(context).backgroundColor,
+                            radius: 20,
+                            backgroundImage: AssetImage('assets/images 4.jpg'),
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Container(
+                          height: 150,
+                          width: MediaQuery.of(context).size.width * 0.75,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CustomText(
+                                  text:
+                                  '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."'),
+                              SizedBox(height: 5),
+                              CustomText(
+                                text: 'Jane Doe',
+                                fontWeight: FontWeight.bold,
+                              ),
+                              SizedBox(height: 5),
+                              CustomText(
+                                text: 'Classic Computers',
+                                color: grey,
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                );
+              })
+        ),
+      )),
     );
   }
 }
