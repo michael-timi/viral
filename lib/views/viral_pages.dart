@@ -15,7 +15,7 @@ class _ViralPagesState extends State<ViralPages> {
   final List<Widget> _children = [
     Home(),
     Campaign(),
-    Media(),
+    //Media(),
     Profile(),
   ];
   @override
@@ -35,10 +35,10 @@ class _ViralPagesState extends State<ViralPages> {
             icon: Icon(Icons.notifications_active),
             title: Text(''),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.perm_media),
-            title: Text(''),
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.perm_media),
+          //   title: Text(''),
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
             title: Text(''),

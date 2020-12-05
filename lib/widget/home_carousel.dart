@@ -16,8 +16,7 @@ class HomeCarousel extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Carousel(
         images: [
-          NetworkImage(
-              'https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
+          ExactAssetImage("assets/test2.jpg"),
           NetworkImage(
               'https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
           ExactAssetImage("assets/test1.jpg")
