@@ -146,7 +146,7 @@ class Testimonials extends StatelessWidget {
                           child: CircleAvatar(
                             foregroundColor: Theme.of(context).backgroundColor,
                             radius: 20,
-                            backgroundImage: AssetImage('assets/images 4.jpg'),
+                            backgroundImage: AssetImage(testimonial[index].imgUrl),
                           ),
                         ),
                         SizedBox(width: 5),
@@ -158,16 +158,15 @@ class Testimonials extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               CustomText(
-                                  text:
-                                  '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."'),
+                                  text:testimonial[index].testimony),
                               SizedBox(height: 5),
                               CustomText(
-                                text: 'Jane Doe',
+                                text: testimonial[index].name,
                                 fontWeight: FontWeight.bold,
                               ),
                               SizedBox(height: 5),
                               CustomText(
-                                text: 'Classic Computers',
+                                text: testimonial[index].company,
                                 color: grey,
                               ),
                             ],

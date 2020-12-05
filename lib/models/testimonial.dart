@@ -37,7 +37,7 @@ List<Testimonial> testimonial = [
       imgUrl: 'assets/image6.jpg'),
   Testimonial(
       name: 'Jodrey (Mr Ideal Nigeria)',
-      company: 'Aceride | acerideng.com',
+      company: 'AceRide | acerideng.com',
       testimony: 'The world is indeed closer with WhatsApp. I strongly recommend this platform to you because most of our leads at Ace Ride came from WhatsApp marketing.',
       imgUrl: 'assets/image7.jpg')
 ];
