@@ -77,7 +77,14 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      appBar: AppBar(
+        title: CustomText(
+          text: update.title,
+          size: 12,
+          color: white,
+        ),
+      ),
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -104,10 +111,7 @@ class DetailsPage extends StatelessWidget {
                 size: 10,
               ),
               SizedBox(height: 4),
-              CustomText(
-                text: update.body,
-                size: 14,
-              )
+              CustomText(text: update.body, size: 14)
             ],
           ),
         ),
