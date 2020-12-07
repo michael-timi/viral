@@ -5,11 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:viral/services/auth_service.dart';
 import 'package:viral/views/first_view.dart';
 import 'package:viral/views/locations/location.dart';
-import 'package:viral/views/locations/location_cart.dart';
-import 'package:viral/views/news.dart';
 import 'package:viral/views/verify_login.dart';
 import 'package:viral/views/viral_pages.dart';
 import 'package:viral/widget/provider.dart';
+
+//This is Josh Comment
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
