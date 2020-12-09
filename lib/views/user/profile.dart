@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:viral/models/user.dart';
 import 'package:viral/views/user/add_card.dart';
-import 'file:///C:/Users/Michael%20Timi/AndroidStudioProjects/viral/edit_user.dart';
+import 'edit_user.dart';
 import 'package:viral/widget/colors.dart';
 import 'package:viral/widget/provider.dart';
 import 'package:viral/widget/title.dart';
