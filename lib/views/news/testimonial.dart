@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:viral/models/testimonial.dart';
 import 'package:viral/widget/colors.dart';
 import 'package:viral/widget/testimonial/locations_widget.dart';
 import 'package:viral/widget/title.dart';

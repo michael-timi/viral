@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:viral/models/locations.dart';
-
+import 'package:viral/models/testimony.dart';
 import 'lat_long_widget.dart';
 
 class ImageWidget extends StatelessWidget {
-  final Location location;
+  final Testimony testimony;
 
   const ImageWidget({
-    @required this.location,
+    @required this.testimony,
     Key key,
   }) : super(key: key);
 
@@ -36,7 +35,7 @@ class ImageWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   buildTopText(),
-                  LatLongWidget(location: location),
+                  LatLongWidget(testimony: testimony),
                 ],
               ),
             )
@@ -49,12 +48,12 @@ class ImageWidget extends StatelessWidget {
   Widget buildImage() => SizedBox.expand(
         child: ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(8)),
-          child: Image.asset(location.urlImage, fit: BoxFit.cover),
+          child: Image.asset(testimony.urlImage, fit: BoxFit.cover),
         ),
       );
 
   Widget buildTopText() => Text(
-        location.name,
+        testimony.name,
         style: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold,

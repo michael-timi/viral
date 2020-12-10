@@ -1,22 +1,17 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:viral/models/overview.dart';
 import 'package:viral/views/admin/admin.dart';
-import 'package:viral/views/locations/location_cart.dart';
-import 'package:viral/views/news.dart';
 import 'package:viral/views/news/faqs.dart';
 import 'package:viral/views/news/testimonial.dart';
 import 'package:viral/views/news/update_and_offer.dart';
-import 'package:viral/widget/cart_item.dart';
 import 'package:viral/widget/colors.dart';
 import 'package:viral/widget/contact.dart';
 import 'package:viral/widget/home_carousel.dart';
 import 'package:viral/widget/news_card.dart';
 import 'package:viral/widget/overview_card.dart';
 import 'package:viral/widget/title.dart';
-import 'package:viral/widget/vc_chart.dart';
 import 'package:viral/widget/provider.dart';
 
 List<Overview> overviewList = [

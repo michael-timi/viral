@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:viral/models/locations.dart';
+import 'package:viral/models/testimony.dart';
 import 'stars_widget.dart';
 
 class ExpandedContentWidget extends StatelessWidget {
-  final Location location;
+  final Testimony testimony;
 
   const ExpandedContentWidget({
-    @required this.location,
+    @required this.testimony,
     Key key,
   }) : super(key: key);
 
@@ -21,9 +21,9 @@ class ExpandedContentWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(location.addressLine1),
+            Text(testimony.testimony),
             SizedBox(height: 8),
-            buildAddressRating(location: location),
+            buildAddressRating(testimony: testimony),
             SizedBox(height: 12),
             //buildReview(location: location)
           ],
@@ -31,16 +31,16 @@ class ExpandedContentWidget extends StatelessWidget {
       );
 
   Widget buildAddressRating({
-    @required Location location,
+    @required Testimony testimony,
   }) =>
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            location.addressLine2,
+            testimony.company,
             style: TextStyle(color: Colors.black45),
           ),
-          StarsWidget(stars: location.starRating),
+          StarsWidget(stars: testimony.starRating),
         ],
       );
 }

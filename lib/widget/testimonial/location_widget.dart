@@ -1,15 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:viral/models/locations.dart';
-
+import 'package:viral/models/testimony.dart';
 import 'expanded_content_widget.dart';
 import 'image_widget.dart';
 
 class LocationWidget extends StatefulWidget {
-  final Location location;
+  final Testimony testimony;
 
   const LocationWidget({
-    @required this.location,
+    @required this.testimony,
     Key key,
   }) : super(key: key);
 
@@ -34,7 +33,7 @@ class _LocationWidgetState extends State<LocationWidget> {
             bottom: isExpanded ? 40 : 200,
             width: isExpanded ? size.width * 0.78 : size.width * 0.7,
             height: isExpanded ? size.height * 0.6 : size.height * 0.5,
-            child: ExpandedContentWidget(location: widget.location),
+            child: ExpandedContentWidget(testimony: widget.testimony),
           ),
           AnimatedPositioned(
             duration: Duration(milliseconds: 500),
@@ -42,7 +41,7 @@ class _LocationWidgetState extends State<LocationWidget> {
             child: GestureDetector(
               onPanUpdate: onPanUpdate,
               onTap: () {},
-              child: ImageWidget(location: widget.location),
+              child: ImageWidget(testimony: widget.testimony),
             ),
           ),
         ],

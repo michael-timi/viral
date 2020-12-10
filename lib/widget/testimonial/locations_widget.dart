@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:viral/models/locations.dart';
-
+import 'package:viral/models/testimony.dart';
 import 'location_widget.dart';
 
 class LocationsWidget extends StatefulWidget {
@@ -18,17 +17,17 @@ class _LocationsWidgetState extends State<LocationsWidget> {
           Expanded(
             child: PageView.builder(
               controller: pageController,
-              itemCount: locations.length,
+              itemCount: testimonies.length,
               itemBuilder: (context, index) {
-                final location = locations[index];
+                final testimony = testimonies[index];
 
-                return LocationWidget(location: location);
+                return LocationWidget(testimony: testimony);
               },
               onPageChanged: (index) => setState(() => pageIndex = index),
             ),
           ),
           Text(
-            '${pageIndex + 1}/${locations.length}',
+            '${pageIndex + 1}/${testimonies.length}',
             style: TextStyle(color: Colors.white70),
           ),
           SizedBox(height: 12)

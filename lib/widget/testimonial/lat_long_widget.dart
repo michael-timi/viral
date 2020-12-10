@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:viral/models/locations.dart';
+import 'package:viral/models/testimony.dart';
 
 class LatLongWidget extends StatelessWidget {
-  final Location location;
+  final Testimony testimony;
 
   const LatLongWidget({
-    @required this.location,
+    @required this.testimony,
     Key key,
   }) : super(key: key);
 
@@ -15,12 +15,12 @@ class LatLongWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
-            location.latitude,
+            testimony.city,
             style: TextStyle(color: Colors.white70),
           ),
           Icon(Icons.location_on, color: Colors.white70),
           Text(
-            location.longitude,
+            testimony.state,
             style: TextStyle(color: Colors.white70),
           )
         ],
