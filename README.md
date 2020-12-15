@@ -1,6 +1,6 @@
 # viral
 
-A new Flutter application.
+A Digital market application
 
 ## Getting Started
 
